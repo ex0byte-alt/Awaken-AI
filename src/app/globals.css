@@ -43,7 +43,21 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+.gradient-button-bg{
+  background: linear-gradient(
+    to right,
+    var(--button-gradient-from),
+    var(--button-gradient-to)
+  );
+}
 :root {
+  --button-gradient-from: #006DC4;
+  --button-gradient-to: #6D42E7;
+  --card-gradient-from:rgba(30, 222, 247,0.51);
+  --card-gradient-via:rgba(9, 9, 64,0.3);
+  --card-gradient-to:rgba(208, 17, 211,0.12);
+  --combined-shadow: 0px 0px 2px 0px var(--primary), inset 0px 0px 2px 0px var(--color-primary);
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -116,6 +130,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
