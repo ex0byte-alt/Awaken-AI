@@ -49,11 +49,13 @@
       var(--button-gradient-to));
 }
 
-.gradient-card {
-  background: linear-gradient(110deg,
-      var(--card-gradient-from) 0%,
-      var(--card-gradient-via) 50%,
-      var(--card-gradient-to) 100%);
+.gradient-card{
+  background: linear-gradient(
+    110deg,
+    var(--card-gradient-from) 0%,
+    var(--card-gradient-via) 50%,
+    var(--card-gradient-to) 100%
+  );
   box-shadow: var(--combined-shadow);
   border-radius: 0.5rem;
   backdrop-filter: blur(4px);
