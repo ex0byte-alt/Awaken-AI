@@ -126,6 +126,10 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.bubble-gradient {
+  background: linear-gradient(135deg, #8b5cf6, #0ea5e9);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
