@@ -52,7 +52,6 @@
 }
 
 .gradient-card{
-  .your-class {
   background: linear-gradient(
     110deg,
     var(--card-gradient-from) 0%,
@@ -64,7 +63,7 @@
   backdrop-filter: blur(4px); /* backdrop-blur-sm = 4px blur */
 }
 
-}
+
 :root {
   --button-gradient-from: #006DC4;
   --button-gradient-to: #6D42E7;
