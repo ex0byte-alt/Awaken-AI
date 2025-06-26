@@ -43,7 +43,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-.gradient-button-bg {
+.gradient-button {
   background: linear-gradient(to right,
       var(--button-gradient-from),
       var(--button-gradient-to));
@@ -67,6 +67,10 @@
       var(--text-gradient-to));
   color: transparent;
   background-clip: text;
+}
+
+.bubble-gradient {
+  background: linear-gradient(135deg, #8b5cf6, #0ea5e9);
 }
 
 :root {
@@ -145,10 +149,6 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-}
-
-.bubble-gradient {
-  background: linear-gradient(135deg, #8b5cf6, #0ea5e9);
 }
 
 @layer base {
