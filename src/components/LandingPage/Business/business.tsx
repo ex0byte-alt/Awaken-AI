@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { BadgePercent, Handshake, LineChart, CheckCircle } from "lucide-react";
 import React from "react";
@@ -14,7 +14,7 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ icon, title, points }) => {
   const router = useRouter();
 
   return (
-    <div className="p-[2px] rounded-xl gradient-card w-full max-w-sm h-[30rem]">
+    <div className="p-[2px] rounded-xl gradient-card w-full h-[30rem]">
       <div className="p-4 rounded-[10px] text-white shadow-xl h-full flex flex-col justify-between">
         <div>
           <div className="p-2 w-10 h-10 flex items-center justify-center bg-white/20 rounded-md mb-2">
@@ -76,7 +76,7 @@ const solutions = [
 
 export default function BusinessOutcomes() {
   return (
-    <div className="min-h-screen text-white px-6 py-12 flex flex-col items-center">
+    <div className="min-h-screen text-white px-4 sm:px-6 py-12 flex flex-col items-center">
       <div className="text-3xl font-semibold text-center">
         <span className="gradient-text font-bold">AI Solutions</span>
         <span> for Real Business </span>
@@ -86,7 +86,7 @@ export default function BusinessOutcomes() {
         Our AI-powered tools deliver measurable results across key business areas, helping you achieve your goals faster and more efficiently.
       </p>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full justify-items-center">
         {solutions.map((sol, idx) => (
           <BusinessCard
             key={idx}
