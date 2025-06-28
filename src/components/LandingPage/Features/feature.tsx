@@ -66,7 +66,7 @@ const features = [
 
 export default function FeaturesPage() {
   return (
-    <div className="min-h-screen text-white px-6 py-12 flex flex-col items-center">
+    <div id="features" className="min-h-screen text-white px-6 py-12 flex flex-col items-center">
       <div className="text-3xl font-semibold text-center">
         <div><span className="gradient-text font-bold">Powerful Features</span><span> to Transform Your</span></div>
         <div> Business</div>
