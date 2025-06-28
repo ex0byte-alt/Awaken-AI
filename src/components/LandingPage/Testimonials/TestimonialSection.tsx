@@ -73,7 +73,7 @@ export function TestimonialSection() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="gradient-text ">Success Stories</span> From Our Clients
           </h2>
-          <p className="dark:text-gray-300 light:text-gray-700 text-lg">
+          <p className="dark:text-gray-300 text-gray-700 text-lg">
             Hear from businesses that have transformed their operations and achieved remarkable results with Awaken AI.
           </p>
         </div>
