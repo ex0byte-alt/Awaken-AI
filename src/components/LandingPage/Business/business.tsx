@@ -30,9 +30,9 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ icon, title, points }) => {
             ))}
           </ul>
         </div>
-        <button
+        <button 
           onClick={() => router.push("/")}
-          className="mt-4 gradient-button-bg text-sm py-2 px-4 rounded-md w-full"
+          className="mt-4 gradient-button text-sm py-2 px-4 rounded-md w-full"
         >
           Learn More
         </button>
@@ -76,7 +76,7 @@ const solutions = [
 
 export default function BusinessOutcomes() {
   return (
-    <div className="min-h-screen text-white px-4 sm:px-6 py-12 flex flex-col items-center">
+    <div id="solutions" className="min-h-screen text-white px-4 sm:px-6 py-12 flex flex-col items-center">
       <div className="text-3xl font-semibold text-center">
         <span className="gradient-text font-bold">AI Solutions</span>
         <span> for Real Business </span>
