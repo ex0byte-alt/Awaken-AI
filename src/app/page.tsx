@@ -1,4 +1,4 @@
-import BackgroundPattern from "@/components/back-ground";
+import BackgroundPattern from "@/components/Background";
 import BusinessOutcomes from "@/components/LandingPage/Business/business";
 import ContactSection from "@/components/LandingPage/ContactSection.tsx/ContactSection";
 import FeaturesPage from "@/components/LandingPage/Features/feature";
@@ -11,19 +11,16 @@ import { TestimonialSection } from "@/components/LandingPage/Testimonials/Testim
 export default function Home() {
   return (
     <div>
-        <main className="relative">
-      <BackgroundPattern className=" z-0" />
-
-      <Navbar />
-      <HeroSection />
-      <TestimonialSection />
-      <FeaturesPage />
-      <BusinessOutcomes />
-      <PricingSection />
-      <ContactSection />
+      <BackgroundPattern>
+        <Navbar />
+        <HeroSection />
+        <TestimonialSection />
+        <FeaturesPage />
+        <BusinessOutcomes />
+        <PricingSection />
+        <ContactSection />
+      </BackgroundPattern>
       <FooterSection />
-    </main>
-  
 
     </div>
   );
