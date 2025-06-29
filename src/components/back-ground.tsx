@@ -1,4 +1,4 @@
-// components/BackgroundPattern.tsx
+
 import React from "react";
 import Blob from "./Blob";
 
