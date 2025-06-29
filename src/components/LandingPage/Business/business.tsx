@@ -76,7 +76,7 @@ const solutions = [
 
 export default function BusinessOutcomes() {
   return (
-    <div id="solutions" className="min-h-screen text-white px-4 sm:px-6 py-12 flex flex-col items-center">
+    <div id="solutions" className=" text-white px-4 sm:px-6 py-12 flex flex-col items-center">
       <div className="text-3xl font-semibold text-center">
         <span className="gradient-text font-bold">AI Solutions</span>
         <span> for Real Business </span>
