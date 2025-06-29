@@ -11,19 +11,16 @@ import { TestimonialSection } from "@/components/LandingPage/Testimonials/Testim
 export default function Home() {
   return (
     <div>
-        <main className="relative">
-      <BackgroundPattern className=" z-0" />
-
-      <Navbar />
-      <HeroSection />
-      <TestimonialSection />
-      <FeaturesPage />
-      <BusinessOutcomes />
-      <PricingSection />
-      <ContactSection />
+      <BackgroundPattern>
+        <Navbar />
+        <HeroSection />
+        <TestimonialSection />
+        <FeaturesPage />
+        <BusinessOutcomes />
+        <PricingSection />
+        <ContactSection />
+      </BackgroundPattern>
       <FooterSection />
-    </main>
-  
 
     </div>
   );

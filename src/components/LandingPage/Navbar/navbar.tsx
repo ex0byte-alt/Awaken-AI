@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { ModeToggle } from "@/components/Theme-toggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-3">
+        <ModeToggle />
         <Link
           href="/login"
           className="px-4 py-1.5 border border-white/40 text-sm rounded-full hover:bg-white/10 transition"
