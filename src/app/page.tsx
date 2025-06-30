@@ -1,12 +1,12 @@
-import BackgroundPattern from "@/components/back-ground";
+import BackgroundPattern from "@/components/Background";
 import BusinessOutcomes from "@/components/LandingPage/Business/business";
 import ContactSection from "@/components/LandingPage/ContactSection.tsx/ContactSection";
 import FeaturesPage from "@/components/LandingPage/Features/feature";
 import FooterSection from "@/components/LandingPage/FooterSection/FooterSection";
-import HeroSection from "@/components/LandingPage/HeroSection/HeroSection";
-import Navbar from "@/components/LandingPage/Navbar/navbar";
-import PricingSection from "@/components/LandingPage/Pricing/PricingSection";
-import { TestimonialSection } from "@/components/LandingPage/Testimonials/TestimonialSection";
+import HeroSection from "@/components/LandingPage/HeroSection";
+import Navbar from "@/components/LandingPage/Navbar";
+import PricingSection from "@/components/LandingPage/PricingSection";
+import { TestimonialSection } from "@/components/LandingPage/TestimonialSection";
 
 export default function Home() {
   return (
