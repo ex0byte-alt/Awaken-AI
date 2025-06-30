@@ -1,4 +1,4 @@
-import BackgroundPattern from "@/components/Background";
+import BackgroundPattern from "@/components/LandingPage/Background";
 import BusinessOutcomes from "@/components/LandingPage/BusinessSection";
 import ContactSection from "@/components/LandingPage/ContactSection";
 import FeaturesPage from "@/components/LandingPage/FeatureSection";

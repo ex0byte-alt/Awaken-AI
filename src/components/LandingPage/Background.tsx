@@ -1,6 +1,6 @@
 
 import React from "react";
-import Blob from "./Blob";
+import Blob from "../Blob";
 
 interface BackgroundPatternProps {
   children: React.ReactNode;
