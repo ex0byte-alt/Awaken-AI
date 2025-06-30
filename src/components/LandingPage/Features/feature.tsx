@@ -10,14 +10,14 @@ interface FeatureCardProps {
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon, heading, description }) => {
   return (
     <div className="p-[2px] rounded-xl gradient-card w-full max-w-sm h-48">
-      <div className="p-4 rounded-[10px] text-white shadow-xl transition-transform hover:scale-[1.05] duration-300 h-full flex flex-col justify-between">
+      <div className="p-4 rounded-[10px] dark:text-gray-100 shadow-xl h-full  ">
         <div className="flex items-start gap-3">
           <div>
             <div className="p-2 w-10 h-10 flex items-center justify-center bg-white/20 rounded-md">
               {icon}
             </div>
             <h3 className="text-base pt-3 font-semibold leading-tight min-h-[2rem]">{heading}</h3>
-            <p className="text-sm text-white/80 mt-1 leading-snug min-h-[3.5rem]">{description}</p>
+            <p className="text-sm dark:text-gray-100 mt-1 leading-snug min-h-[3.5rem]">{description}</p>
           </div>
         </div>
       </div>
@@ -66,12 +66,12 @@ const features = [
 
 export default function FeaturesPage() {
   return (
-    <div id="features" className=" text-white px-6 py-12 flex flex-col items-center">
+    <div id="features" className=" dark:text-gray-100 px-6 py-12 flex flex-col items-center">
       <div className="text-3xl font-semibold text-center">
         <div><span className="gradient-text font-bold">Powerful Features</span><span> to Transform Your</span></div>
         <div> Business</div>
       </div>
-      <p className="mt-4 text-center text-white/80 max-w-2xl">
+      <p className="mt-4 text-center dark:text-gray-100 max-w-2xl">
         Our comprehensive suite of AI tools and services designed to streamline operations, boost efficiency, and
         drive growth for businesses of all sizes.
       </p>

@@ -15,16 +15,16 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ icon, title, points }) => {
 
   return (
     <div className="p-[2px] rounded-xl gradient-card w-full max-w-[340px] h-[30rem]">
-      <div className="p-4 rounded-[10px] text-white shadow-xl h-full flex flex-col justify-between">
+      <div className="p-4 rounded-[10px] dark:text-gray-100 shadow-xl h-full flex flex-col justify-between">
         <div>
           <div className="p-2 w-10 h-10 flex items-center justify-center bg-white/20 rounded-md mb-2">
             {icon}
           </div>
           <h3 className="text-lg font-semibold mb-2 leading-tight min-h-[3rem]">{title}</h3>
-          <ul className="space-y-2 text-lg text-white/80">
+          <ul className="space-y-2 text-lg dark:text-gray-100">
             {points.map((point, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <CheckCircle size={16} className="text-white mt-0.5" />
+                <CheckCircle size={16} className="dark:text-gray-100 mt-0.5" />
                 <span>{point}</span>
               </li>
             ))}
@@ -76,13 +76,13 @@ const solutions = [
 
 export default function BusinessOutcomes() {
   return (
-    <div id="solutions" className=" text-white px-4 sm:px-6 py-12 flex flex-col items-center">
+    <div id="solutions" className=" dark:text-gray-100 px-4 sm:px-6 py-12 flex flex-col items-center">
       <div className="text-3xl font-semibold text-center">
         <span className="gradient-text font-bold">AI Solutions</span>
         <span> for Real Business </span>
         <div>Outcomes</div>
       </div>
-      <p className="mt-4 text-center text-white/80 max-w-2xl">
+      <p className="mt-4 text-center dark:text-gray-100 max-w-2xl">
         Our AI-powered tools deliver measurable results across key business areas, helping you achieve your goals faster and more efficiently.
       </p>
 
