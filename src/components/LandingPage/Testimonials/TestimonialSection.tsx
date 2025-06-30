@@ -55,8 +55,8 @@ const Testimonial = ({ Quote, Name, Position, Company, ImageURL }: TestimonialPr
       <div>
         <blockquote className="text-lg mb-6">"{Quote}"</blockquote>
         <div>
-          <div className="font-semibold text-gray-900">{Name}</div>
-          <div className="text-sm text-gray-300">
+          <div className="font-semibold dark:text-white text-gray-900">{Name}</div>
+          <div className="text-sm dark:text-white text-gray-900">
             {Position}, {Company}
           </div>
         </div>
