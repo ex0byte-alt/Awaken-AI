@@ -30,7 +30,7 @@ const Blob: React.FC<BlobProps> = ({
     width: `${size}px`,
     height: `${size}px`,
     position: 'absolute',
-    background: `radial-gradient(circle at center, ${colors[0]}, ${colors[1]})`,
+    background: `linear-gradient( ${colors[0]}, ${colors[1]})`,
     filter: `blur(${blur}px)`,
     opacity,
     zIndex,

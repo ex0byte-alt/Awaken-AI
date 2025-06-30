@@ -79,7 +79,7 @@ export function TestimonialSection() {
         </div>
 
         <Carousel
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto overflow-visible"
           opts={{
             align: "start",
             loop: true,
@@ -91,7 +91,7 @@ export function TestimonialSection() {
           ]}>
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="px-2 md:px-4">
+              <CarouselItem key={index} className="px-2 pl-6 mx-auto md:px-4">
                 <Testimonial {...testimonial} />
               </CarouselItem>
             ))}
@@ -105,4 +105,3 @@ export function TestimonialSection() {
     </section>
   );
 };
-
