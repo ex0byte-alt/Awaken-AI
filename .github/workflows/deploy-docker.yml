@@ -1,4 +1,4 @@
-name: Build and Deploy Docker App to Azure Web App
+name: Build, Push Docker to ACR, and Deploy to App Service
 
 on:
   push:
@@ -6,41 +6,42 @@ on:
       - main
 
 permissions:
+  id-token: write     # Required for OIDC login to Azure
   contents: read
-  id-token: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name:  Checkout code
         uses: actions/checkout@v4
 
-      - name: Login to Azure
+      - name:  Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name:  Azure Login via OIDC
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: 62510ec0-f0cb-41d3-988e-96ed2461dd4b
+          tenant-id: 23f2001443dsstudyiitmac.onmicrosoft.com
+          subscription-id: 3e73c002-7f97-440d-9ed0-523aae89c0ab
           auth-type: oidc
 
-      - name: Build Docker image
+      - name:  Log in to Azure Container Registry
         run: |
-          docker build -t ${{ secrets.AZURE_ACR_NAME }}.azurecr.io/awaken-ai:latest .
+          az acr login --name awakenAIRegistry
 
-      - name: Login to ACR
+      - name:  Build Docker Image
         run: |
-          az acr login --name ${{ secrets.AZURE_ACR_NAME }}
-          
-      - name: Push image to ACR
-        run: |
-          docker push ${{ secrets.AZURE_ACR_NAME }}.azurecr.io/awaken-ai:latest
+          docker build -t awakenairegistry.azurecr.io/awakenai:latest .
 
-      - name: Deploy to Azure Web App
+      - name:  Push Docker Image to ACR
         run: |
-          az webapp config container set \
-            --name ${{ secrets.AZURE_WEBAPP_NAME }} \
-            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
-            --docker-custom-image-name ${{ secrets.AZURE_ACR_NAME }}.azurecr.io/awaken-ai:latest \
-            --docker-registry-server-url https://${{ secrets.AZURE_ACR_NAME }}.azurecr.io
+          docker push awakenairegistry.azurecr.io/awakenai:latest
+
+      - name:  Deploy to Azure App Service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: Awaken-AI
+          images: awakenairegistry.azurecr.io/awakenai:latest
