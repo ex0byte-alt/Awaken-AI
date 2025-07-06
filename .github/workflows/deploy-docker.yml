@@ -26,7 +26,6 @@ jobs:
           client-id: 62510ec0-f0cb-41d3-988e-96ed2461dd4b
           tenant-id: 23f2001443dsstudyiitmac.onmicrosoft.com
           subscription-id: 3e73c002-7f97-440d-9ed0-523aae89c0ab
-          auth-type: oidc
 
       - name:  Log in to Azure Container Registry
         run: |
